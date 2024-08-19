@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.2.1 (2024-08-19)
+
+
+### Bug Fixes
+
+* fix type-check ([9b2e411](https://github.com/edo6661/01-websocket-chat-rn/commit/9b2e411b82e48bb0230e9d18d1c5b7f3804a4df8))
+
 ### 1.1.1 (2024-08-19)
 
 ## [1.2.0](https://github.com/edo6661/01-websocket-chat-rn/compare/v1.1.0...v1.2.0) (2024-08-19)
