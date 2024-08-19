@@ -1,8 +1,6 @@
 import { userSchema } from "@/lib/zod/auth.validation";
 import User from "@/models/user.model";
 import { RequestHandler } from "express";
-import mongoose from "mongoose";
-import zod from "zod";
 
 const login: RequestHandler = (_req, res) => {
   res.json({

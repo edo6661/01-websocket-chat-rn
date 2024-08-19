@@ -1,5 +1,4 @@
 import "dotenv/config";
-import { testUserParsed } from "@/data/parsed";
 import express from "express";
 import PORT from "./constants/port";
 import authRoute from "./routes/auth.route";
@@ -14,7 +13,7 @@ app.use(cookieParser());
 
 app.use("/api/auth", authRoute);
 
-app.get("/", (req, res) => {
+app.get("/", (_req, res) => {
   res.json({
     test: "asdasd",
   });
