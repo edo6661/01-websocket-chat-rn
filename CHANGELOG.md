@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/edo6661/01-websocket-chat-rn/compare/v1.1.0...v1.2.0) (2024-08-19)
+
+
+### Features
+
+* setup auth controller, user model, zod user validation ([cfcefa4](https://github.com/edo6661/01-websocket-chat-rn/commit/cfcefa4535685598902a4769db034464edbe5366))
+
 ## 1.1.0 (2024-08-19)
 
 
