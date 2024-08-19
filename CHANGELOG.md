@@ -7,6 +7,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
+* initial commit setup project 0d0b856
+
+## 1.1.0 (2024-08-19)
+
+
+### Features
+
 * initial commit setup c222094
 
 ## [1.1.0](https://github.com/edo6661/setup-ts/compare/v1.1.5...v1.1.0) (2024-08-19)
