@@ -5,7 +5,8 @@ import authRoute from "./routes/auth.route";
 import { connectToDb } from "./lib/mongoose/connectToDb";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
-const app = express();
+
+export const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
