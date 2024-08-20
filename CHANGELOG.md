@@ -6,39 +6,35 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 1.2.4 (2024-08-20)
 
-
 ### Bug Fixes
 
-* script in build ([ad6eb88](https://github.com/edo6661/01-websocket-chat-rn/commit/ad6eb88df931da0987805ab46e476256531e01d0))
+- script in build ([ad6eb88](https://github.com/edo6661/01-websocket-chat-rn/commit/ad6eb88df931da0987805ab46e476256531e01d0))
 
 ## [1.3.0](https://github.com/edo6661/01-websocket-chat-rn/compare/v1.2.2...v1.3.0) (2024-08-20)
 
-
 ### Features
 
-* add cors ([f33c278](https://github.com/edo6661/01-websocket-chat-rn/commit/f33c27873d8f1c56f0b15032ca404cad8356ee32))
-
+- add cors ([f33c278](https://github.com/edo6661/01-websocket-chat-rn/commit/f33c27873d8f1c56f0b15032ca404cad8356ee32))
 
 ### Bug Fixes
 
-* script in build ([8959480](https://github.com/edo6661/01-websocket-chat-rn/commit/8959480eb892cfe643e502ee7b6bb6a0bfd5a2ba))
-=======
+- # script in build ([8959480](https://github.com/edo6661/01-websocket-chat-rn/commit/8959480eb892cfe643e502ee7b6bb6a0bfd5a2ba))
+
 ### 1.2.3 (2024-08-20)
->>>>>>> 535adbf864dafb6caa2a5406849dafe84643afac
+
+> > > > > > > 535adbf864dafb6caa2a5406849dafe84643afac
 
 ### 1.2.2 (2024-08-20)
 
-
 ### Bug Fixes
 
-* error app exported locally ([1a6e1c9](https://github.com/edo6661/01-websocket-chat-rn/commit/1a6e1c98d7dcf0562c6be35ac785eac6d2e32b80))
+- error app exported locally ([1a6e1c9](https://github.com/edo6661/01-websocket-chat-rn/commit/1a6e1c98d7dcf0562c6be35ac785eac6d2e32b80))
 
 ### 1.2.1 (2024-08-19)
 
-
 ### Bug Fixes
 
-* fix type-check ([9b2e411](https://github.com/edo6661/01-websocket-chat-rn/commit/9b2e411b82e48bb0230e9d18d1c5b7f3804a4df8))
+- fix type-check ([9b2e411](https://github.com/edo6661/01-websocket-chat-rn/commit/9b2e411b82e48bb0230e9d18d1c5b7f3804a4df8))
 
 ### 1.1.1 (2024-08-19)
 
