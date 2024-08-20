@@ -15,3 +15,8 @@ export const userSchema = zod
   .refine((data) => data.password === data.confirmPassword, {
     message: "Password does not match",
   });
+
+export const loginSchema = zod.object({
+  username: zod.string(),
+  password: zod.string(),
+});

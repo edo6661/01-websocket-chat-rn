@@ -1,13 +1,48 @@
 import { hashPassword } from "@/lib/bcrypt/hashPassword";
 import { generateTokenAndSetCookie } from "@/lib/jwt/token";
-import { userSchema } from "@/lib/zod/auth.validation";
+import { loginSchema, userSchema } from "@/lib/zod/auth.validation";
 import User from "@/models/user.model";
 import { RequestHandler } from "express";
+import { comparePassword } from "@/lib/bcrypt/comparePassword";
 
-const login: RequestHandler = (_req, res) => {
-  res.json({
-    message: "login",
-  });
+const login: RequestHandler = async (req, res) => {
+  try {
+    const userValidated = loginSchema.safeParse({
+      ...req.body,
+    });
+    if (!userValidated.success) {
+      res.status(400).json({
+        message: userValidated.error.errors,
+      });
+      return;
+    }
+    const userTryToLogin = userValidated.data;
+    const userExist = await User.findOne({
+      username: userTryToLogin.username,
+    });
+    if (!userExist) {
+      res.status(400).json({
+        message: "User not found",
+      });
+      return;
+    }
+    const isPasswordMatch = await comparePassword(userExist.password, userTryToLogin.password);
+    if (!isPasswordMatch) {
+      res.status(400).json({
+        message: "Password is incorrect",
+      });
+      return;
+    }
+    generateTokenAndSetCookie(userExist._id as string, res);
+    res.json({
+      message: "Login success",
+    });
+  } catch (err) {
+    console.error("Error on login", err);
+    res.status(500).json({
+      message: "Internal server error",
+    });
+  }
 };
 
 const register: RequestHandler = async (req, res) => {
@@ -59,10 +94,6 @@ const register: RequestHandler = async (req, res) => {
     });
   }
 };
-const logout: RequestHandler = (_req, res) => {
-  res.json({
-    message: "logout",
-  });
-};
+const logout: RequestHandler = (_req, _res) => {};
 
 export { login, register, logout };
