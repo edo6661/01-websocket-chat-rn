@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/edo6661/01-websocket-chat-rn/compare/v1.2.2...v1.3.0) (2024-08-20)
+
+
+### Features
+
+* add cors ([f33c278](https://github.com/edo6661/01-websocket-chat-rn/commit/f33c27873d8f1c56f0b15032ca404cad8356ee32))
+
+
+### Bug Fixes
+
+* script in build ([8959480](https://github.com/edo6661/01-websocket-chat-rn/commit/8959480eb892cfe643e502ee7b6bb6a0bfd5a2ba))
+
 ### 1.2.2 (2024-08-20)
 
 
