@@ -1,6 +1,6 @@
 {
   "name": "websocket-chat",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "",
   "main": "src/index.ts",
   "devDependencies": {
@@ -10,9 +10,11 @@
     "@babel/preset-env": "^7.25.3",
     "@babel/preset-typescript": "^7.24.7",
     "@eslint/js": "^9.9.0",
+    "@types/bcryptjs": "^2.4.6",
     "@types/cookie-parser": "^1.4.7",
     "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^22.3.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
