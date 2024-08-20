@@ -22,7 +22,7 @@ app.use("/api/auth", authRoute);
 
 app.get("/", (_req, res) => {
   res.json({
-    test: "asdsdasddsadasdas",
+    test: "TEST TEST 123",
   });
 });
 
