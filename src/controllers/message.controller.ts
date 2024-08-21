@@ -50,16 +50,42 @@ export const sendMessage: RequestHandler = async (req, res) => {
 
     conversationExist.messages.push(newMessage._id);
 
-    res.status(201).json({
-      message: "Message sent",
-    });
+    await Promise.all([newMessage.save(), conversationExist.save()]);
+
+    res.status(201).json(newMessage);
   } catch (error) {
     console.error("Error on sendMessage", error);
 
-    if (error instanceof Error && (error as any).kind === "ObjectId") {
+    if ((error as any).kind === "ObjectId") {
       res.status(400).json({
         message: "Invalid user id format",
       });
     }
+  }
+};
+export const getMessages: RequestHandler = async (req, res) => {
+  try {
+    const { userId: userToChatId } = req.params;
+    const senderId = (req.user?._id as string).toString();
+
+    const conversation = await Conversation.findOne({
+      participants: {
+        $all: [senderId, userToChatId],
+      },
+    }).populate("messages");
+
+    const message =
+      userToChatId === senderId
+        ? "You can't chat with yourself"
+        : conversation?.messages || "No messages yet";
+
+    res.status(200).json({
+      message,
+    });
+  } catch (err) {
+    console.error("Error on getMessages", err);
+    res.status(500).json({
+      message: "Internal server error",
+    });
   }
 };
