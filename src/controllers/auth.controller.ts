@@ -1,5 +1,5 @@
 import { hashPassword } from "@/lib/bcrypt/hashPassword";
-import { generateTokenAndSetCookie } from "@/lib/jwt/token";
+import { clearTokenAndCookie, generateTokenAndSetCookie } from "@/lib/jwt/token";
 import { loginSchema, userSchema } from "@/lib/zod/auth.validation";
 import User from "@/models/user.model";
 import { RequestHandler } from "express";
@@ -26,7 +26,7 @@ const login: RequestHandler = async (req, res) => {
       });
       return;
     }
-    const isPasswordMatch = await comparePassword(userExist.password, userTryToLogin.password);
+    const isPasswordMatch = await comparePassword(userTryToLogin.password, userExist.password);
     if (!isPasswordMatch) {
       res.status(400).json({
         message: "Password is incorrect",
@@ -94,6 +94,18 @@ const register: RequestHandler = async (req, res) => {
     });
   }
 };
-const logout: RequestHandler = (_req, _res) => {};
+const logout: RequestHandler = (_req, res) => {
+  try {
+    clearTokenAndCookie(res);
+    res.json({
+      message: "Logout success",
+    });
+  } catch (err) {
+    console.error("Error on logout", err);
+    res.status(500).json({
+      message: "Internal server error",
+    });
+  }
+};
 
 export { login, register, logout };
