@@ -4,16 +4,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.4.0](https://github.com/edo6661/01-websocket-chat-rn/compare/v1.2.7...v1.4.0) (2024-08-21)
 
-
 ### Features
 
-* jwt & cookies, protectedRoute, (conversation & message) model, route, controller, overrwrite types : jwt.payload, request handler express ([98bfe81](https://github.com/edo6661/01-websocket-chat-rn/commit/98bfe816b81965a32e2e282fd391f3ea328f0f98))
-
+- jwt & cookies, protectedRoute, (conversation & message) model, route, controller, overrwrite types : jwt.payload, request handler express ([98bfe81](https://github.com/edo6661/01-websocket-chat-rn/commit/98bfe816b81965a32e2e282fd391f3ea328f0f98))
 
 ### Bug Fixes
 
-* add method save to message controller ([981ffff](https://github.com/edo6661/01-websocket-chat-rn/commit/981ffff7396bb544f6ea86b7f5bf6cc3a04d09f5))
-* conflict version ([6b2d20a](https://github.com/edo6661/01-websocket-chat-rn/commit/6b2d20a0fdc7a4c60042ccdb0ccd5194d2b16d09))
+- add method save to message controller ([981ffff](https://github.com/edo6661/01-websocket-chat-rn/commit/981ffff7396bb544f6ea86b7f5bf6cc3a04d09f5))
+- conflict version ([6b2d20a](https://github.com/edo6661/01-websocket-chat-rn/commit/6b2d20a0fdc7a4c60042ccdb0ccd5194d2b16d09))
 
 ## [1.3.0](https://github.com/edo6661/01-websocket-chat-rn/compare/v1.2.6...v1.3.0) (2024-08-21)
 
